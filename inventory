@@ -1,0 +1,9 @@
+[all:children]
+default
+abc_group
+
+[default]
+localhost
+
+[abc_group]
+abc_host
