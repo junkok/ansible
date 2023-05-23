@@ -1,5 +1,5 @@
 - name: hostname gathering
-  hosts: localhost
+  hosts: 192.168.56.10
   gather_facts: false
   tasks:
   - name: main task
