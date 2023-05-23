@@ -3,7 +3,7 @@ default
 abc_group
 
 [default]
-localhost
+localhost    ansible_user=root ansible_password=dinnoit5333*
 
 [abc_group]
 abc_host
