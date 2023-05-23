@@ -1,0 +1,9 @@
+---
+# tasks file for hostname_gathering
+- name: hostname
+  shell: hostnamectl
+  register: rs_hostname
+
+- name: debug
+  debug:
+    msg: "{{ rs_hostname }}"
