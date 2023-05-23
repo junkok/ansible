@@ -1,0 +1,7 @@
+- name: hostname gathering
+  hosts: localhost
+  gather_facts: false
+  tasks:
+  - name: main task
+    include_role:
+      name: hostname_gathering
