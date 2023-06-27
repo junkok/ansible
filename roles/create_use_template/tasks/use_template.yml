@@ -1,0 +1,29 @@
+---
+- name: Create a virtual machine from a template
+  vmware_guest:
+    validate_certs: false
+    folder: /IAAS_Datacenter/vm
+    cluster: 'IAAS_iac(D)_Cluster'
+    name: '{{ vm_name }}'
+    state: poweredon
+    template: 'TMP_RHEL7.7_60_50_DEV'
+    disk:
+    - size_gb: 60
+      type: thin
+      datastore: DIAAS_OS_NAS11
+    - size_gb: 50
+      type: thin
+      datastore: DIAAS_OS_NAS11
+    hardware:
+      memory_mb: 4096
+      num_cpus: 2
+      scsi: paravirtual
+      mem_reservation: 4096
+      cpu_shares_level: "normal"
+      mem_shares_level: "normal"
+  delegate_to: localhost
+  register: deploy
+
+- name: debugging
+  debug:
+    var: deploy
