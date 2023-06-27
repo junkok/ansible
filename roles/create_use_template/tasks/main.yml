@@ -1,1 +1,3 @@
 ---
+- name: create New VM use Template
+  include_tasks: use_template.yml
