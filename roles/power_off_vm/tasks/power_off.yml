@@ -1,1 +1,8 @@
 ---
+- name: set Powered-off a virtual machine
+  vmware_guest_powerstate:
+    validate_certs: false
+    folder: 'IAAS_Datacenter/vm'
+    name: '{{ vm_name }}'
+    state: powered-off
+  delegate_to: localhost
