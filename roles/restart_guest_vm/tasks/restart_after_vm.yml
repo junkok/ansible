@@ -1,0 +1,20 @@
+---
+- name: Powered-off the VM : {{ vm_name }}
+  vmware_guest_powerstate:
+    validate_certs: false
+    folder: 'IAAS_Datacenter/vm'
+    name: '{{ vm_name }}'
+    state: powered-off
+  delegate_to: localhost
+
+- name: Wait for 1 minutes
+  pause:
+    minutes: 1
+
+- name: Powered-on the VM : {{ vm_name }}
+  vmware_guest_powerstate:
+    validate_certs: false
+    folder: 'IAAS_Datacenter/vm'
+    name: '{{ vm_name }}'
+    state: powered-on
+  delegate_to: localhost
