@@ -1,0 +1,6 @@
+---
+- name: power off the Guest VM
+  hosts: localhost
+  gather_facts: false
+  roles:
+    - role: power_off_vm
