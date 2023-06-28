@@ -1,4 +1,5 @@
-- name: power on the guest vm
+---
+- name: power on the Guest VM
   hosts: localhost
   gather_facts: false
   roles:
