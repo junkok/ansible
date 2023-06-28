@@ -1,1 +1,3 @@
 ---
+- name: Power on the Guest VM {{ vm_name }}
+  include_tasks: power_on.yml
