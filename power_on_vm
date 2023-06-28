@@ -1,0 +1,6 @@
+---
+- name: power on the guest vm
+  hosts: localhost
+  gather_facts: false
+  roles:
+    - role: power_on_vm
