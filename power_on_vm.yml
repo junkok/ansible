@@ -1,3 +1,4 @@
+---
 - name: power on the Guest VM
   hosts: localhost
   gather_facts: false
