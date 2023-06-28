@@ -1,0 +1,6 @@
+---
+- name: Restart guest VM after 1minute
+  hosts: localhost
+  gather_facts: false
+  roles:
+    - role: restart_guest_vm
